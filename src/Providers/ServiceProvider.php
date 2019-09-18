@@ -13,9 +13,9 @@ class ServiceProvider extends IlluminateServiceProvider
      *
      * @return void
      */
-    public function boot() : void
+    public function boot(): void
     {
-        $this->loadRoutesFrom(__DIR__.'/routes.php');
+        $this->loadRoutesFrom(__DIR__ . DIRECTORY_SEPARATOR . '../routes.php');
     }
 
     /**
@@ -23,8 +23,6 @@ class ServiceProvider extends IlluminateServiceProvider
      *
      * @return void
      */
-    public function register() : void
-    {
-       
-    }
+    public function register(): void
+    { }
 }
