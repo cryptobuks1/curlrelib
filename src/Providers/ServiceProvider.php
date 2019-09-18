@@ -1,26 +1,30 @@
 <?php
 
-namespace Qredis\Qredis\Providers;
+declare(strict_types=1);
 
-use Illuminate\Support\ServiceProvider;
+namespace Qredis\Curlrelib\Providers;
 
-class OAuthServiceProvider extends ServiceProvider
+use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
+
+class ServiceProvider extends IlluminateServiceProvider
 {
     /**
-     * Register services.
+     * Bootstrap the application services.
      *
      * @return void
      */
-    public function register()
-    { }
+    public function boot() : void
+    {
+        $this->loadRoutesFrom(__DIR__.'/routes.php');
+    }
 
     /**
-     * Bootstrap services.
+     * Register the application services.
      *
      * @return void
      */
-    public function boot()
+    public function register() : void
     {
-        $this->loadRoutesFrom(__DIR__ . DIRECTORY_SEPARATOR . '../routes/api.php');
+       
     }
 }

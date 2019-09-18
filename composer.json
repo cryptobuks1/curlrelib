@@ -1,17 +1,32 @@
 {
-    "name": "qredis/qredis",
+    "name": "qredis/curlrelib",
     "type": "library",
+    "description": "Bitcoin JSON-RPC Service Provider for Laravel",
+    "keywords": ["laravel","bitcoin","api","jsonrpc","guzzle"],
     "license": "MIT",
-    "require": {},
+    "authors": [
+        {
+            "name": "Denis Paavilainen",
+            "email": "denpa@netfleet.space",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "denpa/php-bitcoinrpc": "^2.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.0"
+    },
     "autoload": {
-        "psr-4": {
-            "Qredis\\Qredis\\": "src/"
+        "psr-4" : {
+            "Qredis\\Curlrelib\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Qredis\\Qredis\\Providers\\ServiceProvider"
+                "Qredis\\Curlrelib\\Providers\\ServiceProvider"
             ]
         }
     }
