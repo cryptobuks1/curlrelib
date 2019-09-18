@@ -1,0 +1,6 @@
+{
+    "name": "qredis/qredis",
+    "type": "library",
+    "license": "free",
+    "require": {}
+}
