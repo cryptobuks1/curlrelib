@@ -2,5 +2,17 @@
     "name": "qredis/qredis",
     "type": "library",
     "license": "free",
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Qredis\\Qredis\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Qredis\\Qredis\\Providers\\ServiceProvider"
+            ]
+        }
+    }
 }
